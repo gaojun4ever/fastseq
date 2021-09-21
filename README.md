@@ -19,7 +19,7 @@ pip install transformers==3.1.0
 ```shell
 # 将huggingface保存的 模型/checkpoint 转换为onnx格式。这里使用onnxruntime自带的转换工具。
 python -m onnxruntime.transformers.convert_to_onnx \
-    -m "path_to_checkpoint/model_name(gpt2) \
+    -m "path_to_checkpoint/model_name(gpt2)" \
     --model_class GPT2LMHeadModel \
     --output gpt2_fp32.onnx \
     -p fp32
