@@ -25,7 +25,7 @@ python -m onnxruntime.transformers.convert_to_onnx \
     -p fp32
 ```
 
-### 3. demo测试
+### 3. DEMO测试
 ```shell
 CUDA_VISIBLE_DEVICES=3 python demo.py \
     --onnx_model_path "./gpt2_fp32.onnx" \
