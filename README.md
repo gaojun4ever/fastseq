@@ -23,10 +23,24 @@ python -m onnxruntime.transformers.convert_to_onnx \
     --model_class GPT2LMHeadModel \
     --output gpt2_fp32.onnx \
     -p fp32
-
 ```
 
-### 3. TODO
+### 3. demo测试
+```shell
+CUDA_VISIBLE_DEVICES=3 python demo.py \
+    --onnx_model_path "./gpt2_fp32.onnx" \
+    --model_name_or_path "path_to_checkpoint" \
+    --prompt_text "here is an example of gpt2 model" \
+    --do_sample_top_k 5
+```
+参数说明
+
+
+### 4. TODO
+- [x] aaa
+- [x] aaa
+- [x] aaa
+- [x] aaa
 
 
 

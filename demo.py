@@ -24,7 +24,16 @@ parser.add_argument('--prompt_text',
                     type=str,
                     default="here is an example of gpt2 model",
                     help='input text')
+sampling_option_group = parser.add_argument_group("one step sampling options")
 
+sampling_option_group.add_argument('--do_sample',
+                                    action='store_true',
+                                    help='If to do sampling instead of beam search or greedy.')
+sampling_option_group.add_argument('--do_sample_top_p',
+                                    type=float,
+                                    default=0.95,
+                                    help='Nuclear/top-p sampling accumulation probability.')
+sampling_option_group.add_argument('--do_sample_top_k', type=int, default=5, help='Use top-k if non-zero.')
 args = parser.parse_args()
 
 config, tokenizer = GPT2Helper.get_config_and_tokenizer(args.model_name_or_path, args.cache_dir)
@@ -35,7 +44,7 @@ output = GPT2Helper.top_k_top_p_decoding(input_text=args.prompt_text,
                                 config=config, 
                                 tokenizer=tokenizer, 
                                 ort_session=ort_session, 
-                                top_k=5,
+                                top_k=args.do_sample_top_k,
                                 max_decoding_length=50)
 
 
