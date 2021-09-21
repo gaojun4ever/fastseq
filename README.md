@@ -1,5 +1,5 @@
 # Fastseq
-基于ONNXRUNTIME的加速demo
+基于ONNXRUNTIME的加速框架
 
 ### 1. 环境配置
 ```shell
