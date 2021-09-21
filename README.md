@@ -33,14 +33,14 @@ CUDA_VISIBLE_DEVICES=3 python demo.py \
     --prompt_text "here is an example of gpt2 model" \
     --do_sample_top_k 5
 ```
-参数说明
 
 
 ### 4. TODO
-- [x] aaa
-- [x] aaa
-- [x] aaa
-- [x] aaa
-
+- [x] TopK Decoding
+- [ ] Beam Search Decoding
+- [ ] TensorRT Provider
+- [ ] ONNXRUNTIME Framework for BERT 
+- [ ] Benchmark test
+- [ ] RESTful server demo
 
 
