@@ -42,5 +42,6 @@ CUDA_VISIBLE_DEVICES=3 python demo.py \
 - [ ] ONNXRUNTIME Framework for BERT 
 - [ ] Benchmark test
 - [ ] RESTful server demo
+- [ ] ONNXRUNTIME 1.8.1 Support
 
 
