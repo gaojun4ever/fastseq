@@ -38,6 +38,7 @@ CUDA_VISIBLE_DEVICES=3 python demo.py \
 ### 4. TODO
 - [x] TopK Decoding
 - [ ] Beam Search Decoding
+- [ ] INT8 Support
 - [ ] TensorRT Provider
 - [ ] ONNXRUNTIME Framework for BERT 
 - [ ] Benchmark test
